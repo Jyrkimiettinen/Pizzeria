@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+.menu-section {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h2 {
+    color: #1c3b5a;
+    font-size: 28px;
+    border-bottom: 2px solid #bebdbd;
+    padding-bottom: 10px;
+}
+.dish {
+    margin-bottom: 20px;
+}
+.dish h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #2980B9;
+}
+.dish p {
+    font-size: 16px;
+    color: #1e3537;
+}
+.dish ul {
+    list-style-type: none;
+    padding: 0;
+}
+.dish li {
+    font-size: 16px;
+    color: #438ed8;
+}
