@@ -22,7 +22,7 @@ h1 {
     padding: 30px;
     max-width: 1000px;
     margin: 0 auto;
-    color: aqua;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -59,14 +59,14 @@ h2 {
 }
 ul li {
     background: #333333;
-    margin: 0 10px; /* Adjust the margin to control spacing between items */
+    margin: 0 10px; 
     padding: 10px;
     border-radius: 5px;
-    display: inline-block; /* This makes the list items inline */
+    display: inline-block; 
 }
 a {
     font-style: normal;
     font-size: 20px;
     color: aliceblue;
-    text-decoration: none; /* Optional: Removes underline from links */
+    text-decoration: none; 
 }
