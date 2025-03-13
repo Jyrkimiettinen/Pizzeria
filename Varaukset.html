@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet" href="Velin OF.css">
+    <center>
+        <h1>Tietoja Meistä</h1>
+    <ul>
+     <li><a href="Menu.html">Menu</strong></a></li> 
+     <li><a href="Index.html">Pääsivusto</a></li>
+     <li><a href="Meistä.html">meistä</a></li>
+    </ul>
+</center>
+</style>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Varaa Pöytä</h2>
+        <form>
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Puhelinnumero:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="table">Valitse pöytä:</label>
+            <select id="table" name="table">
+                <option value="1">Pöytä 1</option>
+                <option value="2">Pöytä 2</option>
+                <option value="3">Pöytä 3</option>
+                <option value="4">Pöytä 4</option>
+            </select>
+            
+            <label for="time">Varauksen aika:</label>
+            <input type="datetime-local" id="time" name="time" required>
+            
+            <h3>Maksu</h3>
+            <label for="card">Kortin numero:</label>
+            <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456" required>
+            
+            <label for="expiry">Voimassaoloaika:</label>
+            <input type="month" id="expiry" name="expiry" required>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+            
+            <button type="submit">Varaa ja Maksa</button>
+           
+        </form>
+    </div>
 </body>
 </html>
+<footer>
+    <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
+    </footer>
