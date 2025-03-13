@@ -1,0 +1,73 @@
+body { 
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #0c0c0ce0; 
+    text-align: center;
+    background-image: url('Brick background.jpg');
+    background-size: cover;  /* Ensures the image covers the entire page */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps the background static while scrolling */
+    color: #333; /* Ensures text is readable on a dark background */
+    background-image: url('Brick backgorund.jpg');
+
+}   
+header {
+
+    background-color:#333333 ;  
+   color: rgb(236, 226, 226);
+   padding: 10px;
+}
+
+header h1 {
+   margin: 0;
+}
+
+
+
+.container { 
+    max-width: 800px; 
+    margin: auto; 
+    padding: 20px; 
+    background: rgba(169, 168, 168, 0.884); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    h1 {color: #000000;}
+}
+h1 {color:aliceblue}
+h2 { color: #010000; }
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* This makes the list items flex items */
+    justify-content: center; /* This centers the list items horizontally */
+}
+
+ul li {
+    background: #333333;
+    margin: 0 10px; /* Adjust the margin to control spacing between items */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block; /* This makes the list items inline */
+}
+a {
+    font-style: normal;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none; /* Optional: Removes underline from links */
+}
+p {color: #010000; font-family:'Times New Roman', Times, serif;}
+footer {
+    background-color:#1a1a1ab0;
+    color: rgba(255, 255, 255, 0.779);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    position-anchor:  bottom;
+    p {color: #e9e4e4dd; font-family:'Times New Roman', Times, serif;}
+
+}
+
+
