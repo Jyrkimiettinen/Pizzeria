@@ -1,52 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Të Enesin ravintolan virallinen sivu</title>
-    <header>
-    <link rel="stylesheet" href="Index.css">
-    <Center><h1>Të Enesin ravintolan virallinen sivu</h1></Center>
-
-    <ul>
-<center><li><a href="Menu.html">Menu</a></li><li><a href="Meistä.html">Tietoa Meistä</a></li><li><a href="Varaukset.html">Varaukset ja Tilaukset</a></li></center>
-    </ul>
-</header>
-    <style>
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body, html {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        .video-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.3; 
-        }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .content {
-            position: relative;
-            z-index: 1;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="video-container">
@@ -55,12 +13,92 @@
             Your browser does not support the video tag.
         </video>
     </div>
-    <div class="content">
-       
-        <p>Tervetuloa nauttimaan herkullisista ruoista ja tunnelmasta!</p>
+
+    <header>
+        <h1>Të Enesin ravintola</h1>
+        <ul>
+            <li><a href="Menu.html">Menu</a></li>
+            <li><a href="Meistä.html">Tietoa Meistä</a></li>
+            <li><a href="Varaukset.html">Varaukset ja Tilaukset</a></li>
+        </ul>
+    </header>
+
+    <div class="main-content">
+        <div class="content">
+            <h1>Tervetuloa Të Enesi Pizzeriaan!</h1>
+            <p>Olemme ylpeitä tarjoillessamme perinteisiä ja moderneja pizzoja, valmistettuna tuoreista aineksista.</p>
+            <p>Tule nauttimaan herkullisista aterioistamme rentoutuneessa ympäristössä!</p>
+    
+            <div class="special-offer">
+                <h2>Päivän erikoistarjous!</h2>
+                <p>Tänään saat herkullisen margherita-pizzan ja limun vain 8,90 €!</p>
+            </div>
+            <div class="newsletter">
+                <h2>Tilaa uutiskirjeemme</h2>
+                <form action="kiitos.html" method="get"> <!-- Muuta action-osoite -->
+                    <input type="email" name="email" placeholder="Sähköpostiosoitteesi" required>
+                    <button type="submit">Tilaa</button>
+                </form>
+                <p>Saat 10 % alennuksen ensimmäisestä tilauksestasi!</p>
+            </div>
+            <div class="opening-hours">
+                <h2>Aukioloajat</h2>
+                <p>Ma-Pe: 10:00 - 21:00</p>
+                <p>La: 11:00 - 22:00</p>
+            </div>
+        </div>
+        <div class="Content2">
+            <div class="events">
+                <h2>Tulevat Tapahtumat</h2>
+                <p>🎸 Elävä Musiikki: Lauantaina klo 19-22, nauti herkullisista pizzoista live-musiikin säestyksellä!</p>
+                <p>👨‍👩‍👧‍👦 Perheillan Tarjous: Joka torstai klo 17-20, lapset alle 12-vuotiaat syövät puoleen hintaan!</p>
+            </div>
+            <div class="testimonials">
+                <h2>Asiakkaidemme mielipiteitä</h2>
+                <div class="testimonial">
+                    <p>"Paras pizza, jonka olen ikinä maistanut! Palvelu oli erinomaista." - Juho Ollila</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Upeat ainekset ja mahtava tunnelma. Tulen varmasti uudestaan!" - Veli Matti Sakari Lindroos</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Loistava palvelu ja mahtavat pizzat! Suosittelen lämpimästi." - Eni Gashi</p>
+                </div>
+            </div>
+        </div>
     </div>
-<footer>
-    <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
+    <div class="gallery">
+        <h2>Galleriamme</h2>
+        <!-- Pizza images in a row with text above -->
+        <div class="pizza-row">
+            <!-- Pizza 1 -->
+            <div class="image-container">
+                <p>Celiku Special</p>
+                <img src="pizza.1.jpg" alt="Celiku Special">
+            </div>
+            <!-- Pizza 2 -->
+            <div class="image-container">
+                <p>Gashis Dream</p>
+                <img src="pizza2.jpg" alt="Gashis Dream">
+            </div>
+        </div>
+        <!-- Interior image with text above -->
+        <div class="interior-image">
+            <div class="image-container">
+                <p>Ravintolan sisätilat</p>
+                <img src="interior.jpg" alt="Ravintolan sisätilat">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
+            <div class="contact-info">
+                <p>Osoite: Sillaanpäänkatu FE 5E</p>
+                <p>Puhelin: +888 638 3549</p>
+                <p>Sähköposti: PizzeriaTëEnesi@gmail.com</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

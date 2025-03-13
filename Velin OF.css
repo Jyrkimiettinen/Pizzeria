@@ -1,6 +1,6 @@
 body { 
     font-family: Arial, sans-serif; 
-    line-height: 1.6; 
+    line-height: 1.5; 
     margin: 0; 
     padding: 0; 
     background-color: #0c0c0ce0; 
@@ -63,11 +63,41 @@ footer {
     background-color:#1a1a1ab0;
     color: rgba(255, 255, 255, 0.779);
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
     margin-top: auto; /* Ensures footer stays at the bottom */
     position-anchor:  bottom;
     p {color: #e9e4e4dd; font-family:'Times New Roman', Times, serif;}
 
 }
+.footer-content {
+    display: flex; /* Käytä flexboxia */
+    justify-content: space-between; /* Tekijänoikeustiedot vasemmalle, yhteystiedot oikealle */
+    align-items: center; /* Keskitä pystysuunnassa */
+    margin: 0 auto; /* Keskitä vaakasuunnassa */
+}
 
+.contact-info {
+    text-align: right; /* Yhteystiedot oikealle */
+}
 
+.contact-info p {
+    margin: 5px 0; /* Lisää väliä tekstiriveille */
+}
+.image-container {
+    display: inline-block; /* Display containers inline */
+    margin: 10px; /* Add spacing between containers */
+    text-align: center; /* Center the text and image */
+}
+
+.image-container img {
+    width: 400px; /* Set a fixed width for the images */
+    height: 300px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+    border-radius: 10px; /* Rounded corners for the images */
+}
+
+.image-container p {
+    color: white; /* White text for the captions */
+    font-size: 24px; /* Set font size for the captions */
+    margin-top: 15px; /* Add spacing above the caption */
+}

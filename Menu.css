@@ -58,7 +58,7 @@ h2 {
     color: #34495E;
 }
 ul li {
-    background: #333333;
+    background: #222222;
     margin: 0 10px; /* Adjust the margin to control spacing between items */
     padding: 10px;
     border-radius: 5px;
@@ -69,4 +69,37 @@ a {
     font-size: 20px;
     color: aliceblue;
     text-decoration: none; /* Optional: Removes underline from links */
+}
+.menu-section{
+    ul li {
+        font-size: 18px;
+        background-color: #f4f4f4;
+        color: #2980B9;
+        font-weight: 500;
+    }
+}
+footer {
+    background-color:#1a1a1ad3;
+    color: rgba(255, 255, 255, 0.779);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    position-anchor:  bottom;
+    p {color: #e9e4e4dd; font-family:'Times New Roman', Times, serif;}
+
+}
+.footer-content {
+    display: flex; /* Käytä flexboxia */
+    justify-content: space-between; /* Tekijänoikeustiedot vasemmalle, yhteystiedot oikealle */
+    align-items: center; /* Keskitä pystysuunnassa */
+    max-width: 1200px; /* Rajoita leveys */
+    margin: 0 auto; /* Keskitä vaakasuunnassa */
+}
+
+.contact-info {
+    text-align: right; /* Yhteystiedot oikealle */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Lisää väliä tekstiriveille */
 }
