@@ -80,3 +80,27 @@ video {
 .content p {
     font-size: 18px;
 }
+ul li {
+    background: #333333;
+    margin: 0 10px; /* Adjust the margin to control spacing between items */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block; /* This makes the list items inline */
+}
+a {
+    font-style: normal;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none; /* Optional: Removes underline from links */
+}
+header {
+
+    background-color:#06060686 ;  
+   color: rgb(236, 226, 226);
+   padding: 10px;
+}
+
+header h1 {
+   margin: 0;
+}
+
