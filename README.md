@@ -3,7 +3,7 @@ Të Enesi -pizzerian verkkosivusto rakennetaan HTML:llä ja CSS:llä, tarjoten n
 
 Etusivu: Tervetuloviesti, suosituimmat pizzat, erikoistarjoukset ja toimintakehote (esim. "Tilaa nyt" tai "Varaa pöytä").
 
-Menu: Kaikki ruokalistan annokset ja juomat selkeästi esiteltynä kategorioittain, sisältäen kuvat, hinnat ja ainesosaluettelot.
+Menu: Kaikki ruokalistan annokset ja juomat selkeästi esiteltynä kategorioittain, hinnat ja ainesosaluettelot.
 
 Tee tilaus: Mahdollisuus valita ja tilata tuotteita kotiinkuljetuksella tai noudettavaksi.
 
