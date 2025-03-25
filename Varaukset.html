@@ -1,58 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Velin OF.css">
-    <center>
-        <h1>Tietoja Meistä</h1>
-    <ul>
-        <li><a href="Index.html">Pääsivusto</a></li>
-        <li><a href="Menu.html">Menu</a></li>
-        <li><a href="Meistä.html">Tietoa Meistä</a></li>
-        <li><a href="Varaukset.html">Varaukset ja Tilaukset</a></li>
-    </ul>
-</center>
-</style>
-</head>
+    <link rel="stylesheet" href="Varaukset.css">
+    <link rel="icon" type="image/png" href="Pizzeria.jpg">
+    <style>
+        /* Mobile responsive styles */
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 15px 10px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px;
+                background: rgba(0,0,0,0.1);
+                border-radius: 5px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .content-section {
+                margin-bottom: 25px;
+                padding: 15px;
+                background: rgba(255,255,255,0.05);
+                border-radius: 8px;
+            }
+            
+            .content-section h2 {
+                font-size: 1.4rem;
+                text-align: center;
+            }
+            
+            .form-group {
+                margin-bottom: 15px;
+            }
+            
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            
+            input, select, textarea {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            
+            textarea {
+                height: 100px;
+            }
+            
+            button[type="submit"] {
+                width: 100%;
+                padding: 12px;
+                font-size: 1rem;
+            }
+            
+            .menu-item {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            
+            .menu-item div {
+                margin-bottom: 5px;
+            }
+            
+            .menu-item select {
+                width: 100%;
+            }
+            
+            .delivery-fee {
+                text-align: center;
+                margin-bottom: 15px;
+                padding: 10px;
+                background: rgba(255,255,255,0.1);
+                border-radius: 5px;
+            }
+            
+            footer {
+                padding: 15px;
+                text-align: center;
+            }
+        }
 
+        /* Smaller mobile devices */
+        @media only screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .content-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .content-section h3 {
+                font-size: 1.1rem;
+            }
+            
+            input, select, textarea {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <title>Varaukset ja Tilaukset</title>
+</head>
 <body>
+    <header>
+        <h1>Varaukset ja Tilaukset</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Pääsivusto</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Meistä.html">Tietoa Meistä</a></li>
+                <li><a href="Varaukset.html">Varaukset ja Tilaukset</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
-        <h2>Varaa Pöytä</h2>
-        <form>
-            <label for="name">Nimi:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="phone">Puhelinnumero:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="table">Valitse pöytä:</label>
-            <select id="table" name="table">
-                <option value="1">Pöytä 1</option>
-                <option value="2">Pöytä 2</option>
-                <option value="3">Pöytä 3</option>
-                <option value="4">Pöytä 4</option>
-            </select>
-            
-            <label for="time">Varauksen aika:</label>
-            <input type="datetime-local" id="time" name="time" required>
-            
-            <h3>Maksu</h3>
-            <label for="card">Kortin numero:</label>
-            <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456" required>
-            
-            <label for="expiry">Voimassaoloaika:</label>
-            <input type="month" id="expiry" name="expiry" required>
-            
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" placeholder="123" required>
-            
-            <button type="submit">Varaa ja Maksa</button>
-           
-        </form>
+        <div class="content-section">
+            <h2>Varaa pöytä</h2>
+            <form id="reservation-form">
+                <div class="form-group">
+                    <label for="reservation-name">Nimi *</label>
+                    <input type="text" id="reservation-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reservation-phone">Puhelinnumero *</label>
+                    <input type="tel" id="reservation-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="reservation-date">Päivämäärä *</label>
+                    <input type="date" id="reservation-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="reservation-time">Aika *</label>
+                    <input type="time" id="reservation-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="reservation-guests">Henkilömäärä *</label>
+                    <select id="reservation-guests" required>
+                        <option value="1">1 henkilö</option>
+                        <option value="2">2 henkilöä</option>
+                        <option value="3">3 henkilöä</option>
+                        <option value="4">4 henkilöä</option>
+                        <option value="5">5 henkilöä</option>
+                        <option value="6">6 henkilöä</option>
+                        <option value="7">7+ henkilöä</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reservation-notes">Lisätiedot (allergiat, erityistoiveet jne.)</label>
+                    <textarea id="reservation-notes" rows="3"></textarea>
+                </div>
+                <button type="submit">Varaa pöytä</button>
+            </form>
+        </div>
+
+        <div class="content-section">
+            <h2>Tilaa kotiinkuljetus</h2>
+            <div class="delivery-fee">
+                <p>Kotiinkuljetus maksaa <strong>5€</strong></p>
+            </div>
+            <form id="delivery-form">
+                <div class="form-group">
+                    <label for="delivery-name">Nimi *</label>
+                    <input type="text" id="delivery-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-phone">Puhelinnumero *</label>
+                    <input type="tel" id="delivery-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-address">Osoite *</label>
+                    <input type="text" id="delivery-address" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-time">Toivottu toimitusaika</label>
+                    <input type="time" id="delivery-time">
+                </div>
+                
+                <h3>Valitse ruoat</h3>
+                
+                <div class="menu-item">
+                    <div>
+                        <strong>Margherita</strong> - 12€
+                    </div>
+                    <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                
+                <div class="menu-item">
+                    <div>
+                        <strong>Diavola</strong> - 14€
+                    </div>
+                    <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                
+                <div class="menu-item">
+                    <div>
+                        <strong>Quattro Stagioni</strong> - 15€
+                    </div>
+                    <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="delivery-notes">Lisätiedot (allergiat, erityistoiveet jne.)</label>
+                    <textarea id="delivery-notes" rows="3"></textarea>
+                </div>
+                
+                <button type="submit">Tilaa</button>
+            </form>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+    <script>
+        // Yksinkertainen lomakkeiden käsittely
+        document.getElementById('reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Kiitos varauksestasi! Otamme sinuun yhteyttä vahvistusta varten.');
+            this.reset();
+        });
+
+        document.getElementById('delivery-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Kiitos tilauksestasi! Ruokasi on matkalla. Kuljetusmaksu 5€ lisätään laskuun.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
-<footer>
-    <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
-    </footer>

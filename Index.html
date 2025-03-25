@@ -2,11 +2,179 @@
 <html lang="fi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Të Enesin ravintolan virallinen sivu</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="Pizzeria.jpg">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Puhelinystävälliset tyylit */
+        @media only screen and (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+            
+            .video-container {
+                position: relative;
+                height: 60vh;
+                overflow: hidden;
+            }
+            
+            .video-container video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+            header {
+                padding: 15px 10px;
+                text-align: center;
+                background: rgba(0,0,0,0.7);
+                position: relative;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+            
+            header ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                padding: 0;
+            }
+            
+            header ul li {
+                display: inline-block;
+            }
+            
+            header ul li a {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+                background: rgba(255,255,255,0.1);
+                border-radius: 20px;
+            }
+            
+            .main-content {
+                flex-direction: column;
+                padding: 15px;
+                gap: 20px;
+            }
+            
+            .content, .Content2 {
+                width: 100%;
+                padding: 0;
+            }
+            
+            .content h1 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+            
+            .special-offer, .newsletter, .opening-hours, .events, .testimonials {
+                margin-bottom: 25px;
+                padding: 15px;
+                border-radius: 10px;
+                background: rgba(255,255,255,0.1);
+            }
+            
+            .newsletter form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .newsletter input {
+                padding: 12px;
+                font-size: 1rem;
+            }
+            
+            .newsletter button {
+                padding: 12px;
+                font-size: 1rem;
+            }
+            
+            .pizza-row {
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 15px;
+            }
+            
+            .image-container {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            
+            .image-container img {
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            
+            .gallery h2, .testimonials h2, .events h2 {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            
+            .testimonial {
+                padding: 12px;
+                margin-bottom: 12px;
+                background: rgba(255,255,255,0.1);
+                border-radius: 8px;
+            }
+            
+            footer .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                padding: 20px 10px;
+            }
+            
+            .contact-info p {
+                margin: 5px 0;
+            }
+        }
+
+        /* Pienemmille näytöille (alle 480px) */
+        @media only screen and (max-width: 480px) {
+            header ul {
+                gap: 5px;
+            }
+            
+            header ul li a {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+            }
+            
+            .content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .special-offer h2, .newsletter h2, .opening-hours h2 {
+                font-size: 1.2rem;
+            }
+            
+            .events p, .testimonial p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Kaikki alkuperäinen HTML-sisältö säilyy ennallaan -->
     <div class="video-container">
         <video autoplay loop muted>
             <source src="background.mp4" type="video/mp4">
@@ -14,8 +182,9 @@
         </video>
     </div>
 
-    <header>
+    <header class="fade-in">
         <h1>Të Enesin ravintola</h1>
+        
         <ul>
             <li><a href="Index.html">Pääsivusto</a></li>
             <li><a href="Menu.html">Menu</a></li>
@@ -24,37 +193,37 @@
         </ul>
     </header>
 
-    <div class="main-content">
+    <div class="main-content fade-in">
         <div class="content">
             <h1>Tervetuloa Të Enesi Pizzeriaan!</h1>
             <p>Olemme ylpeitä tarjoillessamme perinteisiä ja moderneja pizzoja, valmistettuna tuoreista aineksista.</p>
             <p>Tule nauttimaan herkullisista aterioistamme rentoutuneessa ympäristössä!</p>
     
-            <div class="special-offer">
+            <div class="special-offer fade-in">
                 <h2>Päivän erikoistarjous!</h2>
                 <p>Tänään saat herkullisen margherita-pizzan ja limun vain 8,90 €!</p>
             </div>
-            <div class="newsletter">
+            <div class="newsletter fade-in">
                 <h2>Tilaa uutiskirjeemme</h2>
-                <form action="kiitos.html" method="get"> <!-- Muuta action-osoite -->
+                <form action="kiitos.html" method="get">
                     <input type="email" name="email" placeholder="Sähköpostiosoitteesi" required>
                     <button type="submit">Tilaa</button>
                 </form>
                 <p>Saat 10 % alennuksen ensimmäisestä tilauksestasi!</p>
             </div>
-            <div class="opening-hours">
+            <div class="opening-hours fade-in">
                 <h2>Aukioloajat</h2>
                 <p>Ma-Pe: 10:00 - 21:00</p>
                 <p>La: 11:00 - 22:00</p>
             </div>
         </div>
-        <div class="Content2">
+        <div class="Content2 fade-in">
             <div class="events">
                 <h2>Tulevat Tapahtumat</h2>
                 <p>🎸 Elävä Musiikki: Lauantaina klo 19-22, nauti herkullisista pizzoista live-musiikin säestyksellä!</p>
                 <p>👨‍👩‍👧‍👦 Perheillan Tarjous: Joka torstai klo 17-20, lapset alle 12-vuotiaat syövät puoleen hintaan!</p>
             </div>
-            <div class="testimonials">
+            <div class="testimonials fade-in">
                 <h2>Asiakkaidemme mielipiteitä</h2>
                 <div class="testimonial">
                     <p>"Paras pizza, jonka olen ikinä maistanut! Palvelu oli erinomaista." - Juho Ollila</p>
@@ -68,38 +237,51 @@
             </div>
         </div>
     </div>
-    <div class="gallery">
+    <div class="gallery fade-in">
         <h2>Galleriamme</h2>
-        <!-- Pizza images in a row with text above -->
-        <div class="pizza-row">
-            <!-- Pizza 1 -->
+       
+        <div class="pizza-row fade-in">
+         
             <div class="image-container">
                 <p>Celiku Special</p>
                 <img src="pizza.1.jpg" alt="Celiku Special">
             </div>
-            <!-- Pizza 2 -->
+       
             <div class="image-container">
                 <p>Gashis Dream</p>
                 <img src="pizza2.jpg" alt="Gashis Dream">
             </div>
         </div>
-        <!-- Interior image with text above -->
-        <div class="interior-image">
+        <div class="interior-image fade-in">
             <div class="image-container">
                 <p>Ravintolan sisätilat</p>
                 <img src="interior.jpg" alt="Ravintolan sisätilat">
             </div>
         </div>
     </div>
-    <footer>
+    <footer class="fade-in">
         <div class="footer-content">
             <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
             <div class="contact-info">
-                <p>Osoite: Sillaanpäänkatu FE 5E</p>
+                <p>Osoite: Tähystäjäntie 4</p>
                 <p>Puhelin: +888 638 3549</p>
                 <p>Sähköposti: PizzeriaTëEnesi@gmail.com</p>
             </div>
         </div>
     </footer>
+    <script>
+        function revealOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.9) {
+                    el.classList.add('show');
+                }
+            });
+        }
+        
+        document.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
 </body>
 </html>

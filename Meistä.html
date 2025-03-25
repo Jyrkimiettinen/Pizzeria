@@ -1,50 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Velin OF.css">
-    <title>Tietoja Meistä</title>
+    <link rel="icon" type="image/png" href="Pizzeria.jpg">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile responsive styles */
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 15px 10px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px;
+                background: rgba(0,0,0,0.1);
+                border-radius: 5px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .content-section {
+                margin-bottom: 25px;
+                padding: 15px;
+                background: rgba(255,255,255,0.05);
+                border-radius: 8px;
+            }
+            
+            .content-section h1 {
+                font-size: 1.6rem;
+            }
+            
+            .content-section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .map-container iframe {
+                width: 100%;
+                height: 300px;
+            }
+            
+            .info-box {
+                padding: 10px;
+            }
+            
+            footer {
+                padding: 15px;
+                text-align: center;
+            }
+        }
+
+        /* Smaller mobile devices */
+        @media only screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .content-section h1 {
+                font-size: 1.4rem;
+            }
+            
+            .content-section h2 {
+                font-size: 1.2rem;
+            }
+            
+            .content-section p {
+                font-size: 0.9rem;
+            }
+            
+            .map-container iframe {
+                height: 250px;
+            }
+        }
+    </style>
+    <title>Pizzeria Të Enesi – Tietoa Meistä</title>
 </head>
-<header>
-    <center>
-        <h1>Tietoja Meistä</h1>
-    <ul>
-        <li><a href="Index.html">Pääsivusto</a></li>
-        <li><a href="Menu.html">Menu</a></li>
-        <li><a href="Meistä.html">Tietoa Meistä</a></li>
-        <li><a href="Varaukset.html">Varaukset ja Tilaukset</a></li>    </ul>
-</center>
-</header>
 <body>
+    <header>
+        <h1>Tietoa Meistä</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Pääsivusto</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Meistä.html">Tietoa Meistä</a></li>
+                <li><a href="Varaukset.html">Varaukset ja Tilaukset</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Pizzeria Të Enesi</h1>
-        <h2><strong>Omistajat: </strong></h2>
-        <h2>Tietoa meistä</h2>
-        <p>Pizzeria Të Enesi on paikka, jossa yhdistyvät laadukkaat raaka-aineet, perinteiset reseptit ja rakkaus hyvään ruokaan. Omistajat Triumf Dumani ja Emir Miftari ovat pitkän linjan ravintola-alan ammattilaisia, joiden tavoitteena on tarjota asiakkailleen parasta pizzaa ja unohtumattomia makuelämyksiä.</p>
-    <p>Meidän pizzeria sijaitsee Sillaanpäänkatu F.E 5E:essä Hornhattulassa</p>
-    <p>Perustimme tämän firman, koska Enes Celiku motivoi meitä parantamaan meidän elämäntapoja. Enes Celiku oli joillekki niiden rakas mutta meille hän oli Idoli hän oli tunnettu kokki, kenen reseptit olivat niin erikoisia että meidän piti jakaa se koko maailmalle.</p>
-    <p>Pizzeriamme antaa kotimmaisen olon ja tervetuloaa kaikki (paitsi serbialaiset) paikalle.</p>
-    <div class="image-container">
-        <h2>Të Enesi Logo</h2>
-        <img src="Te-Enesi logo.jpg" alt="Të-Enesi Logo">
+        <div class="content-section fade-in">
+            <h1>Pizzeria Të Enesi</h1>
+            <h2>Omistajat</h2>
+            <p>Triumf Dumani ja Emir Miftari</p>
+        </div>
+
+        <div class="content-section fade-in">
+            <h2>Tietoa meistä</h2>
+            <p>Pizzeria Të Enesi on paikka, jossa yhdistyvät laadukkaat raaka-aineet, perinteiset reseptit ja rakkaus hyvään ruokaan. Omistajat Triumf Dumani ja Emir Miftari ovat pitkän linjan ravintola-alan ammattilaisia, joiden tavoitteena on tarjota asiakkailleen parasta pizzaa ja unohtumattomia makuelämyksiä.</p>
+            <p>Meidän pizzeria sijaitsee Tähystäjäntie 4 Kevätkummussa</p>
+            <p>Perustimme tämän firman, koska Enes Celiku motivoi meitä parantamaan meidän elämäntapoja. Enes Celiku oli joillekki niiden rakas mutta meille hän oli Idoli hän oli tunnettu kokki, kenen reseptit olivat niin erikoisia että meidän piti jakaa se koko maailmalle.</p>
+            <p>Pizzeriamme antaa kotimmaisen olon ja tervetuloaa kaikki paikalle.</p>
+        </div>
+
+        <div class="content-section image-container fade-in">
+            <h2>Të Enesi Logo</h2>
+            <img src="Te-Enesi logo.jpg" alt="Të-Enesi Logo">
+        </div>
+
+        <div class="content-section map-container fade-in">
+            <h2>Löydä meidät</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.1800680791298!2d25.699687877063486!3d60.39270367514671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4691f4380bff5a65%3A0x1d62d6dfed77b384!2zVMOkaHlzdMOkasOkbnRpZSA0LCAwNjE1MCBQb3J2b28!5e0!3m2!1sfi!2sfi!4v1742896767654!5m2!1sfi!2sfi" width="1150" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="content-section fade-in">
+            <h2>Aukioloajat</h2>
+            <div class="info-box">
+                <p><strong>Arkipäivisin:</strong> 10:00 - 21:00</p>
+                <p><strong>Viikonloppuisin:</strong> 10:00 - 22:00</p>
+            </div>
+        </div>
+
+        <div class="content-section fade-in">
+            <h2>Yhteistiedot</h2>
+            <div class="info-box">
+                <p><strong>Sähköposti:</strong> <a href="mailto:ufidumani@gmail.com">Miftariemir4@gmail.com</a></p>
+                <p><strong>Puhelin:</strong> <a href="tel:+358 45 667 9788">044 243 2600</a></p>
+            </div>
+        </div>
     </div>
-    <div class="map-container">
-        <h2>Löydä meidät</h2>
-        <iframe src="https://www.google.fi/maps/place/Pizzeria+Dumani/@60.4940112,25.5369226,16.26z/data=!4m15!1m8!3m7!1s0x4691f42e9464915d:0xed1286af9480b7e7!2sPorvoo!3b1!8m2!3d60.3931919!4d25.6652739!16zL20vMGQ5MnI!3m5!1s0x4691f6806c1aea9f:0x6cd1855e905a343b!8m2!3d60.4940061!4d25.5405741!16s%2Fg%2F1td6l9n1?entry=ttu&g_ep=EgoyMDI1MDMxMC4wIKXMDSoASAFQAw%3D%3D" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <h2><strong>Aukioloajat:</strong></h2>
-    <p>Arkipäivisin: 10:00 - 21:00</p>
-    <p>Viikonloppuisin: 10:00 - 22:00</p> 
-<section>
-<h2><strong>Yhteistiedot:</strong></h2>
-<p>Sähköposti: <a href="mailto:ufidumani@gmail.com">Miftariemir4@gmail.com</a></p>
-<p>Puhelin: <a href="tel:+358 456 679 788">044 243 2600</a></p>
-</section>
-    </div>
+
     <footer>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.1748492440772!2d25.699719077063545!3d60.392789875146725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4691f4380c663f79%3A0xd2c9b568549b7cf6!2sT%3Ami%20Dumani!5e0!3m2!1sfi!2sus!4v1741861332063!5m2!1sfi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
-</footer>
+        <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>

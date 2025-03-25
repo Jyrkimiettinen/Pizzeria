@@ -3,139 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Të Enesi Pizzeria – Menu</title>
+    <title>Pizzeria Të Enesi – Menu</title>
     <link rel="stylesheet" href="Menu.css">
+    <link rel="icon" type="image/png" href="Pizzeria.jpg">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Menu</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Pääsivusto</a></li>
+                <li><a href="Menu.html">Menu</a></li>
+                <li><a href="Meistä.html">Tietoa Meistä</a></li>
+                <li><a href="Varaukset.html">Varaukset ja Tilaukset</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="menu-section compact fade-in">
+            <h2>Pizzat</h2>
+            <article class="dish">
+                <h3>Margherita</h3>
+                <p>Tomaattikastike, mozzarella, basilika ja oliiviöljy.</p>
+            </article>
+            <article class="dish">
+                <h3>Diavola</h3>
+                <p>Tomaattikastike, salami, chili, mozzarella ja basilika.</p>
+            </article>
+            <article class="dish">
+                <h3>Gashis Special</h3>
+                <p>Kinkku, sienet, artisokka ja mustat oliivit.</p>
+            </article>
+        </section>
 
-<header>
-    <h1>Të Enesi Pizzeria – Menu</h1>
-    <ul>
-        <li><a href="Index.html">Pääsivusto</a></li>
-        <li><a href="Menu.html">Menu</a></li>
-        <li><a href="Meistä.html">Tietoa Meistä</a></li>
-        <li><a href="Varaukset.html">Varaukset ja Tilaukset</a></li>    </ul>
-</header>
+        <section class="menu-section compact fade-in">
+            <h2>Pasta</h2>
+            <article class="dish">
+                <h3>Spaghetti Bolognese</h3>
+                <p>Perinteinen italialainen pasta, jossa maukas lihalla ja tomaattikastike.</p>
+            </article>
+            <article class="dish">
+                <h3>Penne Arrabbiata</h3>
+                <p>Mausteinen penne-pasta valkosipulilla, chilillä ja tomaattikastikkeella.</p>
+            </article>
+        </section>
 
-<div class="menu-section">
-    <h2>Aloitus</h2>
-    <div class="dish">
-        <h3>Bruschetta al Pomodoro</h3>
-        <p>Tuoretta ciabattaa, joka on paahdettu ja päällystetty tomaatilla, valkosipulilla, basilikalla ja oliiviöljyllä.</p>
-    </div>
-    <div class="dish">
-        <h3>Mozzarella di Bufala</h3>
-        <p>Herkullinen, pehmeä mozzarella, tarjoiltuna tuoreilla tomaateilla, basilikanlehdillä ja balsamicokastikkeella.</p>
-    </div>
-    <div class="dish">
-        <h3>Frittura di Calamari</h3>
-        <p>Paistettuja mustekalarenkaita, tarjoiltuna tuoreiden yrttien ja sitruunan kera.</p>
-    </div>
-</div>
+        <section class="menu-section compact fade-in">
+            <h2>Jälkiruoat</h2>
+            <article class="dish">
+                <h3>Tiramisu</h3>
+                <p>Perinteinen italialainen jälkiruoka, jossa kerroksia mascarpone-juustoa, kahvia ja kaakaota.</p>
+            </article>
+            <article class="dish">
+                <h3>Panna Cotta</h3>
+                <p>Kermainen jälkiruoka, tarjoiltuna marjakastikkeen ja tuoreiden marjojen kera.</p>
+            </article>
+        </section>
+    </main>
 
-<div class="menu-section">
-    <h2>Pizzat</h2>
-    <div class="dish">
-        <h3>Margherita</h3>
-        <p>Klassinen pizza tomaattikastikkeella, tuoreella mozzarellalla, basilikalla ja oliiviöljyllä.</p>
-    </div>
-    <div class="dish">
-        <h3>Diavola</h3>
-        <p>Mausteinen pizza, jossa tomaattikastike, salami, chili, mozzarella ja tuore basilika.</p>
-    </div>
-    <div class="dish">
-        <h3>Capricciosa</h3>
-        <p>Pizza tomaattikastikkeella, kinkulla, herkkusienillä, artisokalla ja oliiveilla, pehmennetty mozzarella.</p>
-    </div>
-    <div class="dish">
-        <h3>Quattro Stagioni</h3>
-        <p>Pizza neljällä eri täytteellä: kinkkua, sieniä, artisokkia ja mustia oliiveja.</p>
-    </div>
-    <div class="dish">
-        <h3>Të Enesi Speciale</h3>
-        <p>Pizza, jossa tomaattikastike, savustettu lohi, punasipuli, kaprikset ja tuorejuustokastike.</p>
-    </div>
-</div>
-
-<div class="menu-section">
-    <h2>Pasta</h2>
-    <div class="dish">
-        <h3>Spaghetti Bolognese</h3>
-        <p>Perinteinen italialainen pasta, joka on täytetty maukkaalla lihalla ja tomaattikastikkeella.</p>
-    </div>
-    <div class="dish">
-        <h3>Penne Arrabbiata</h3>
-        <p>Mausteinen penne-pasta valkosipulilla, chilillä ja tomaattikastikkeella, tarjoiltuna tuoreilla yrteillä.</p>
-    </div>
-    <div class="dish">
-        <h3>Lasagna al Forno</h3>
-        <p>Kerroksellinen lasagne, jossa bolognese-kastike, juustokastike ja tuore pasta.</p>
-    </div>
-    <div class="dish">
-        <h3>Fettuccine Alfredo</h3>
-        <p>Kermainen fettuccine-pasta, jossa parmesan-juustoa ja valkosipulia, tarjoiltuna tuoreilla yrteillä.</p>
-    </div>
-</div>
-
-<div class="menu-section">
-    <h2>Erikoistarjoukset</h2>
-    <div class="dish">
-        <h3>Pizza del Giorno</h3>
-        <p>Päivän pizza, joka valmistetaan kauden tuoreista raaka-aineista. Tarkista päivän erikoistarjous pöydästä.</p>
-    </div>
-    <div class="dish">
-        <h3>Të Enesi Pizzataituri</h3>
-        <p>Rakenna oma pizza valitsemistasi täytteistä. Valitse pohja, kastike, juusto ja suosikkitäytteet.</p>
-    </div>
-</div>
-
-<div class="menu-section">
-    <h2>Lisukkeet</h2>
-    <ul>
-        <li>Patatas Fritas – Paistettuja perunoita tuoreilla yrteillä</li>
-        <li>Insalata Verde – Vihreä salaatti oliiviöljy-kastikkeella</li>
-        <li>Pomodori e Mozzarella – Tomaatti-mozzarella-salaatti</li>
-        <li>Pane all’Aglio – Valkosipulileipä tuoreella voilla</li>
-    </ul>
-</div>
-
-<div class="menu-section">
-    <h2>Jälkiruoat</h2>
-    <div class="dish">
-        <h3>Tiramisu</h3>
-        <p>Perinteinen italialainen jälkiruoka, jossa kerroksia mascarpone-juustoa, kahvia ja kaakaota.</p>
-    </div>
-    <div class="dish">
-        <h3>Panna Cotta</h3>
-        <p>Kermainen jälkiruoka, tarjoiltuna marjakastikkeen ja tuoreiden marjojen kera.</p>
-    </div>
-    <div class="dish">
-        <h3>Gelato Misto</h3>
-        <p>Valikoima käsintehtyjä italialaisia jäätelöitä: suklaata, vaniljaa, mansikkaa ja pistaasia.</p>
-    </div>
-</div>
-
-<div class="menu-section">
-    <h2>Juomat</h2>
-    <ul>
-        <li>Vesitilkka – Hiilihapotettu tai tavallinen vesi</li>
-        <li>Fresca di Frutta – Tuoreiden hedelmien mehu</li>
-        <li>Limoncello – Perinteinen italialainen sitruunalikööri</li>
-        <li>Italialaiset Viinit – Laaja valikoima punaisia ja valkoisia viinejä</li>
-        <li>Olut – Tuoretta italialaista olutta valikoimastamme</li>
-    </ul>
-</div>
-<footer>
-    <div class="footer-content">
+    <footer>
         <p>&copy; 2025 Pizzeria Të Enesi. Kaikki oikeudet pidätetään.</p>
-        <div class="contact-info">
-            <p>Osoite: Sillaanpäänkatu FE 5E</p>
-            <p>Puhelin: +888 638 3549</p>
-            <p>Sähköposti: PizzeriaTëEnesi@gmail.com</p>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
+
 
 

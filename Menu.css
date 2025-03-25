@@ -1,106 +1,84 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
 
-header {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+        }
 
-h1 {
-    margin: 0;
-    font-size: 36px;
-}
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
 
-.menu-section {
-    padding: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-    color: rgb(0, 0, 0);
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-}
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-h2 {
-    color: #000000;
-    font-size: 28px;
-    border-bottom: 2px solid #BDC3C7;
-    padding-bottom: 10px;
-}
+        nav a:hover {
+            color: #f8c537;
+        }
 
-.dish {
-    margin-bottom: 20px;
-}
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.dish h3 {
-    margin: 0;
-    font-size: 24px;
-    color: #2980B9;
-}
+        .menu-section {
+            margin-bottom: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-.dish p {
-    font-size: 16px;
-    color: #7F8C8D;
-}
+        .menu-section h2 {
+            color: #f8c537;
+            border-bottom: 2px solid #f8c537;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
 
-.dish ul {
-    list-style-type: none;
-    padding: 0;
-}
+        .dish {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
 
-.dish li {
-    font-size: 16px;
-    color: #34495E;
-}
-ul li {
+        .dish:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
 
-    background: #333333;
-    margin: 0 10px; 
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block; 
-}
-a {
-    font-style: normal;
-    font-size: 20px;
-    color: aliceblue;
-    text-decoration: none; 
-}
-.menu-section{
-    ul li {
-        font-size: 18px;
-        background-color: #f4f4f4;
-        color: #2980B9;
-        font-weight: 500;
-    }
-}
-footer {
-    background-color:#1a1a1ad3;
-    color: rgba(255, 255, 255, 0.779);
-    text-align: center;
-    padding: 20px;
-    margin-top: auto; /* Ensures footer stays at the bottom */
-    position-anchor:  bottom;
-    p {color: #e9e4e4dd; font-family:'Times New Roman', Times, serif;}
+        .dish h3 {
+            color: #f8c537;
+            margin-top: 0;
+        }
 
-}
-.footer-content {
-    display: flex; /* Käytä flexboxia */
-    justify-content: space-between; /* Tekijänoikeustiedot vasemmalle, yhteystiedot oikealle */
-    align-items: center; /* Keskitä pystysuunnassa */
-    max-width: 1200px; /* Rajoita leveys */
-    margin: 0 auto; /* Keskitä vaakasuunnassa */
-}
-
-.contact-info {
-    text-align: right; /* Yhteystiedot oikealle */
-}
-
-.contact-info p {
-    margin: 5px 0; /* Lisää väliä tekstiriveille */
-}
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+   
