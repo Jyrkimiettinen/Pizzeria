@@ -74,11 +74,16 @@
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            text-align: center;
-            padding: 15px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Tumma tausta */
+            color: white; /* Valkoinen teksti */
+            padding: 20px; /* Sisäinen täyttö */
+            text-align: center; /* Teksti keskelle oletuksena */
         }
-   
+        
+        .footer-content {
+            display: flex; /* Käytä flexboxia */
+            justify-content: space-between; /* Tekijänoikeustiedot vasemmalle, yhteystiedot oikealle */
+            align-items: center; /* Keskitä pystysuunnassa */
+            max-width: 1200px; /* Rajoita leveys */
+            margin: 0 auto; /* Keskitä vaakasuunnassa */
+        }
